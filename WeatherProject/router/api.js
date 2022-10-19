@@ -15,4 +15,6 @@ router.get('/getAllProducts', product.getAllProducts)
 
 
 
+
+
 module.exports = router
