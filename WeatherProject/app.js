@@ -3,7 +3,6 @@ const rout = require('express').Router()
 
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-// const produts = require('./models/product')
 const jwt = require('jsonwebtoken')
 const env = require('dotenv')
 const router = require('./router/api')
@@ -15,7 +14,7 @@ const prod = require('./controller/allProduct')
 
 
 const { Router } = require('express')
-const product = require('./models/product')
+const member = require('./models/member')
 
 const userScema = {
     useNewUrlParser: true,
@@ -38,7 +37,7 @@ app.use((req, res, next) => {
 });
 
 // console.log(prod);
-// product.insertMany(prod,(err, res)=>{
+// member.insertMany(prod,(err, res)=>{
 //     if (err) throw err;
 //     console.log("succsess");
 //  })

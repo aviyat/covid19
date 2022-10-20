@@ -9,10 +9,7 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    history:[{
-        type:mongoose.Types.ObjectId,
-        ref:'buy'
-    }]
+  
 
 })
 module.exports = mongoose.model('user', userSchema)

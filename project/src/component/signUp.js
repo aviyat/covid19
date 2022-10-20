@@ -3,12 +3,12 @@ import { createUser } from './service';
 import { connect } from 'react-redux';
 import { updateUser } from './store/action';
 import Menu from '../component/menu';
-import './login.css';
+
 import { withRouter } from 'react-router-dom';
 
 function mapStateToProps(state) {
     return {
-        basket: state.basket,
+       
         userState: state.user
     }
 }
@@ -21,11 +21,11 @@ const mapDispatcToProps = (dispatch) => ({
 
 export default withRouter(connect(mapStateToProps, mapDispatcToProps)(function SignUp(props) {
     const { updateUser, userState } = props
-    const [name, setName] = useState('');
-    const [password, setPassword] = useState('');
+    // const [name, setName] = useState('');
+    // const [password, setPassword] = useState('');
     const nameRef = useRef()
     const passwordRef = useRef()
-    const { history } = props;
+    // const { history } = props;
 
 
     function sign(e) {
@@ -34,7 +34,7 @@ export default withRouter(connect(mapStateToProps, mapDispatcToProps)(function S
         updateUser(obj)
         if (passwordRef.current.value !== '' && nameRef.current.value !== '') {
             createUser({ name: nameRef.current.value, password: passwordRef.current.value })
-            history.push('/about')
+           
         }
         else console.log("הכנס נתונים")
     }
@@ -64,14 +64,7 @@ export default withRouter(connect(mapStateToProps, mapDispatcToProps)(function S
                         </div>
                     </form>
                 </div>
-                <br></br><br></br>
-                <br></br><br></br>
-                <br></br><br></br>
-                <br></br><br></br>
-                <br></br><br></br>
-                <br></br><br></br>
-                <br></br><br></br>
-                <br></br><br></br>
+              
             </div>
         </>
     )

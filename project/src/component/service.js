@@ -7,11 +7,11 @@ export function createUser(user) {
         .catch(err => { console.log('err:', err); })
 }
 
-export function loginUser(user) {
-    debugger
-    const data = axios.post("http://localhost:5000/loginUser", user);
-    return data;
-}
+// export function loginUser(user) {
+//     debugger
+//     const data = axios.post("http://localhost:5000/loginUser", user);
+//     return data;
+// }
 
 export async function getAllProducts() {
     debugger
@@ -19,10 +19,3 @@ export async function getAllProducts() {
     return data;
 }
 
-export async function saveHistory(user, obj) {
-    debugger
-    let newObj = { user: user, history: obj }
-
-    let data = await axios.post("http://localhost:5000/addBuy", newObj);
-    return data;
-}
