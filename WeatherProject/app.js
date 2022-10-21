@@ -9,7 +9,7 @@ const router = require('./router/api')
 const app = express()
 env.config()
 app.use(bodyParser.json())
-const prod = require('./controller/allProduct')
+const prod = require('./controller/allMembers')
 
 
 

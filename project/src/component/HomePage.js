@@ -2,7 +2,7 @@
 import './members.css'
 import { connect } from 'react-redux'
 import React, { useEffect, useState } from 'react';
-import { getAllProducts } from './service';
+import { getAllMembers } from './service';
 import axios from 'axios';
 
 // import Menu from './menu';
@@ -11,21 +11,16 @@ import axios from 'axios';
 // function mapStateToProps(state) {
 //   return { basket: state.basket }
 // }
-// const mapDispatcToProps = (dispatch) => ({
 
-//   // addToCart: (product) => dispatch(addToCart(product)),
-
-
-// })
 export default (function PFood(props) {
   const { addToCart } = props;
-  const [allProducts, setAllProducts] = useState([]);
+  const [allMembers, setAllMembers] = useState([]);
   const [chosenP, setChosenP] = useState();
   useEffect(async () => {
     debugger;
 
-    let data = await axios.get("http://localhost:3500/getAllProducts");
-    data.data.map(element => (element.type == "Food" ? setAllProducts(allProducts => [...allProducts, element]) : " "))
+    let data = await axios.get("http://localhost:3500/getAllMembers");
+    data.data.map(element => (element.type == "Food" ? setAllMembers(allMembers => [...allMembers, element]) : " "))
 
   }, []);
 
@@ -39,7 +34,7 @@ export default (function PFood(props) {
         {
 
 
-          allProducts.map(item => {
+allMembers.map(item => {
             return (
               <>
                 <div className="card col-4" >

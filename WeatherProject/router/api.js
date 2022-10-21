@@ -8,10 +8,7 @@ const router = require('express').Router()
 
 router.post('/addMember', product.addMember)
 
-
-
-//products
-router.get('/getAllProducts', product.getAllProducts)
+router.get('/getAllMembers', product.getAllMembers)
 
 
 

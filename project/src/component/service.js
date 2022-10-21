@@ -8,9 +8,9 @@ export function createMember(member) {
         .catch(err => { console.log('err:', err); })
 }
 
-export async function getAllProducts() {
+export async function getAllMembers() {
     debugger
-    let data = await axios.get("http://localhost:3500/getAllProducts");
+    let data = await axios.get("http://localhost:3500/getAllMembers");
     return data;
 }
 
