@@ -1,10 +1,12 @@
 
-const Member = require('../models/member')
+const member = require('../models/member')
 const jwt = require('jsonwebtoken')
 const request = require('request')
 // const nodemailer = require('nodemailer')
 const env = require('dotenv')
-const jwt = require('jsonwebtoken')
+// const jwt = require('jsonwebtoken')
+const Member = require('../models/member')
+
 
 
 env.config()
