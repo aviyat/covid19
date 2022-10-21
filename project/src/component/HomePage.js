@@ -24,7 +24,7 @@ export default (function PFood(props) {
   useEffect(async () => {
     debugger;
 
-    let data = await axios.get("http://localhost:5000/getAllProducts");
+    let data = await axios.get("http://localhost:3500/getAllProducts");
     data.data.map(element => (element.type == "Food" ? setAllProducts(allProducts => [...allProducts, element]) : " "))
 
   }, []);

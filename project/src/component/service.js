@@ -1,21 +1,16 @@
 import axios from 'axios'
+// import member from '../../../WeatherProject/models/member';
 
-export function createUser(user) {
+export function createMember(member) {
     debugger
-    axios.post("http://localhost:5000/signUp", user)
-        .then(res => { console.log('create user succses:', JSON.stringify(res)); })
+    axios.post("http://localhost:3500/addMember", member)
+        .then(res => { console.log('create member succses:', JSON.stringify(res)); })
         .catch(err => { console.log('err:', err); })
 }
 
-// export function loginUser(user) {
-//     debugger
-//     const data = axios.post("http://localhost:5000/loginUser", user);
-//     return data;
-// }
-
 export async function getAllProducts() {
     debugger
-    let data = await axios.get("http://localhost:5000/getAllProducts");
+    let data = await axios.get("http://localhost:3500/getAllProducts");
     return data;
 }
 

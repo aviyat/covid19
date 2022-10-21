@@ -1,13 +1,13 @@
-const user = require('../controller/user')
+
 const product= require('../controller/product')
+const member = require('../models/member')
 const router = require('express').Router()
 
 
-//user
 
-router.post('/signUp', user.signUp)
-// router.post('/loginUser', user.loginUser)
-// router.get('/getUserById/:_id', user.getUserById)
+
+router.post('/addMember', product.addMember)
+
 
 
 //products

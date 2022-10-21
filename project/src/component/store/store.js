@@ -7,7 +7,7 @@ const state = {
     // basket: [
 
     // ],
-    user:{
+    member:{
 
     }
 };
@@ -31,9 +31,9 @@ const reducer = produce((state, action) => {
 
         //     })
         //     break
-            case 'UPDATE_USER':{
+            case 'UPDATE_MEMBER':{
                 debugger
-                state.user={...action.payload}
+                state.member={...action.payload}
                 break
             }
            

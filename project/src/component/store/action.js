@@ -4,9 +4,9 @@
 //     debugger
 //     return { type: 'DELETE_ITEM', payload: Item }
 // }
-export function updateUser(Item) {
+export function updateMember(Item) {
     debugger
-    return { type: 'UPDATE_USER', payload: Item }
+    return { type: 'UPDATE_MEMBER', payload: Item }
 }
 
 

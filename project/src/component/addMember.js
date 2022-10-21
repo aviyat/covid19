@@ -1,26 +1,27 @@
 import React, { useState, useRef } from 'react';
-import { createUser } from './service';
+import { createMember } from './service';
 import { connect } from 'react-redux';
-import { updateUser } from './store/action';
-import Menu from '../component/menu';
+import { updateMember } from './store/action';
+import Menu from './menu';
 
 import { withRouter } from 'react-router-dom';
+import member from '../../../WeatherProject/models/member';
 
 function mapStateToProps(state) {
     return {
        
-        userState: state.user
+        memberState: state.member
     }
 }
 
 const mapDispatcToProps = (dispatch) => ({
 
-    updateUser: (user) => dispatch(updateUser(user)),
+    updateMember: (member) => dispatch(createMember(member)),
 
 })
 
-export default withRouter(connect(mapStateToProps, mapDispatcToProps)(function SignUp(props) {
-    const { updateUser, userState } = props
+export default withRouter(connect(mapStateToProps, mapDispatcToProps)(function addMember(props) {
+    const { updateMember, memberState } = props
     // const [name, setName] = useState('');
     // const [password, setPassword] = useState('');
     const nameRef = useRef()
@@ -31,9 +32,9 @@ export default withRouter(connect(mapStateToProps, mapDispatcToProps)(function S
     function sign(e) {
         e.preventDefault();
         let obj = { name: nameRef.current.value, password: passwordRef.current.value }
-        updateUser(obj)
+        updateMember(obj)
         if (passwordRef.current.value !== '' && nameRef.current.value !== '') {
-            createUser({ name: nameRef.current.value, password: passwordRef.current.value })
+            createMember({ name: nameRef.current.value, password: passwordRef.current.value })
            
         }
         else console.log("הכנס נתונים")
@@ -41,7 +42,7 @@ export default withRouter(connect(mapStateToProps, mapDispatcToProps)(function S
 
     return (
         <>
-            {Object.keys(userState).length == 0 ? "" : <Menu></Menu>}
+            {Object.keys(memberState).length == 0 ? "" : <Menu></Menu>}
             <div className={"allLogin"}>
                
                 <br></br> <br></br> <br></br><br></br>

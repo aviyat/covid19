@@ -4,17 +4,6 @@ import { connect } from 'react-redux';
 
 
 
-// function mapStateToProps(state) {
-//     return { user: state.user }
-//   }
-
-// export default connect(mapStateToProps, null)(
-//  function Menu(props) {
-//      const {user}= props
-// useEffect(()=>{
-//     console.log(user);
-// },[])
-
     return (
         <>
 
