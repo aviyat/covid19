@@ -2,11 +2,14 @@ const mongoose = require('mongoose');
 // const product = require('./product');
 const memberSchema = mongoose.Schema({
 
-
+    url:{
+        type:String
+    },
     memberName:{
         type:String,
         required:true
     },
+
     id:{
         type:Number,
         required:true

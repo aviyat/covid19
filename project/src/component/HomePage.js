@@ -12,17 +12,35 @@ import axios from 'axios';
 //   return { basket: state.basket }
 // }
 
-export default (function PFood(props) {
-  const { addToCart } = props;
-  const [allMembers, setAllMembers] = useState([]);
-  const [chosenP, setChosenP] = useState();
-  useEffect(async () => {
-    debugger;
+// export default (function PFood(props) {
+//   const { addToCart } = props;
+//   const [allMembers, setAllMembers] = useState([]);
+//   const [chosenP, setChosenP] = useState();
+//   useEffect(async () => {
+//     debugger;
 
-    let data = await axios.get("http://localhost:3500/getAllMembers");
-    data.data.map(element => (element.type == "Food" ? setAllMembers(allMembers => [...allMembers, element]) : " "))
+//     let data = await axios.get("http://localhost:3500/getAllMembers");
+//     data.data.map(element => (element.type == "Food" ? setAllMembers(allMembers => [...allMembers, element]) : " "))
 
-  }, []);
+//   }, []);
+export default (function MemberList  (props)  {
+    const [allMembers, setAllMembers] = useState([]);
+      const [chosenP, setChosenP] = useState();
+
+ 
+    useEffect(() => {
+        getMembers();
+    }, []);
+ 
+    const getMembers = async () => {
+        const response = await axios.get('http://localhost:3500/getAllMembers');
+        setAllMembers(response.data);
+    }
+  
+    // const deleteMember = async (id) => {
+    //     await axios.delete(`http://localhost:3500/products/${id}`);
+    //     getProducts();
+    // }
 
 
   return (
@@ -40,11 +58,10 @@ allMembers.map(item => {
                 <div className="card col-4" >
                   <img className="card-img-top " src={item.url} alt="Card image cap" />
                   <div className="card-body">
-                    <h5 className="card-title">{item.prodName}</h5>
-                    <p className="card-text">מחיר:{item.price}<i style={{ fontSize: "14px" }} class="fa">&#xf20b;</i></p>
+                    <h5 className="card-title">{item.memberName}</h5>
+                    <p className="card-text">id:{item.id}</p>
                     <button type="button" onClick={() => setChosenP(item)} class="btn1 btn-primary" data-toggle="modal" data-target="#exampleModal">
-                      לצפייה והוספה לסל
-                    </button>
+               member details </button>
                     <br />
 
                   </div>
@@ -82,7 +99,7 @@ allMembers.map(item => {
     </>
   )
 
-}
+      }
+
 
 )
-

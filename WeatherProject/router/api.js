@@ -7,7 +7,6 @@ const router = require('express').Router()
 
 
 router.post('/addMember', product.addMember)
-
 router.get('/getAllMembers', product.getAllMembers)
 
 
