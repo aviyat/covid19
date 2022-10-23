@@ -54,12 +54,11 @@ export default withRouter(connect(mapStateToProps, mapDispatcToProps)(function A
                        
 
                     });
-                    history.push("/");
+                    // history.push("/");
     }
 
     return (
         <>
-            <Menu/>
             <div>
 //             <form onSubmit={ AddMember }>
 //                 <div className="field">

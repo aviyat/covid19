@@ -65,6 +65,7 @@ allMembers.map(item => {
                     <button type="button" onClick={() => setChosenP(item)} class="btn1 btn-primary" data-toggle="modal" data-target="#exampleModal">
                member details </button>
                     <br />
+                   
 
                   </div>
                 </div>
@@ -84,11 +85,11 @@ allMembers.map(item => {
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-              <h5 class="modal-title" id="exampleModalLabel">{chosenP && chosenP.prodName}</h5>
+              <h5 class="modal-title" id="exampleModalLabel">{chosenP && chosenP.memberName}</h5>
             </div>
             <div class="modal-body">
               <img src={chosenP && chosenP.url} />
-              <h6 class="modal-title" id="exampleModalLabel">{chosenP && chosenP.prodDesc}-{chosenP && chosenP.price}<i style={{ fontSize: "14px" }} class="fa">&#xf20b;</i></h6>
+              <h6 class="modal-title" id="exampleModalLabel">{chosenP && chosenP.id}-{chosenP && chosenP.phone}</h6>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

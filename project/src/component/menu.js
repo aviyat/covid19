@@ -29,7 +29,7 @@ useEffect(()=>{
                             <Link to="/addMember" className={"nav-link"}>addMember</Link>
                         </li>
                         
-                        <h4 >שלום </h4>
+                        {/* <h4 >שלום </h4> */}
                     </ul>
 
                 </div>
