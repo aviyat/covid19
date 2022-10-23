@@ -30,6 +30,10 @@ const memberSchema = mongoose.Schema({
     mobilePhone:{
         type:Number,
         required:true
-    }
+    },
+    history:[{
+        type:mongoose.Types.ObjectId,
+        ref:'vaccination'
+    }]
 })
 module.exports = mongoose.model('product', memberSchema)

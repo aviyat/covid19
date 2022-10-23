@@ -9,4 +9,10 @@ export function updateMember(Item) {
     return { type: 'UPDATE_MEMBER', payload: Item }
 }
 
+    export function addMember(Item) {
+        debugger
+        return { type: 'ADD_MEMBER', payload: Item }
+    }
+
+
 

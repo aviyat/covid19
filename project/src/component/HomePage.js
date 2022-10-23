@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { getAllMembers } from './service';
 import axios from 'axios';
 
-// import Menu from './menu';
+import Menu from './menu';
 
 
 // function mapStateToProps(state) {
@@ -45,7 +45,8 @@ export default (function MemberList  (props)  {
 
   return (
     <>
-      {/* <Menu></Menu> */}
+      <Menu></Menu>
+
       <h1>Membres Hospital</h1>
       <div className="row w-100 d-flex justify-content-around">
 
@@ -55,6 +56,7 @@ export default (function MemberList  (props)  {
 allMembers.map(item => {
             return (
               <>
+
                 <div className="card col-4" >
                   <img className="card-img-top " src={item.url} alt="Card image cap" />
                   <div className="card-body">
@@ -95,7 +97,7 @@ allMembers.map(item => {
           </div>
         </div>
       </div>
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+     
     </>
   )
 

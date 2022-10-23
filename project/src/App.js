@@ -10,6 +10,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import AddMember from './component/addMember';
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
               <Route path="/">
                 <HomePage />
               </Route>
+              <Route path="/addMember">
+          <AddMember/>
+         </Route>
             </Switch>
           </div>
         </Router>

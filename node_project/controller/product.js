@@ -27,4 +27,5 @@ const addMember = (req, res) => {
             res.status(400).send('erorrr!!!!')
         })
 }
+
 module.exports = { getAllMembers,addMember }

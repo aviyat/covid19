@@ -1,12 +1,9 @@
 import produce from 'immer';
 import { createStore, applyMiddleware } from 'redux'
-// import { addToCart } from './action';
 
 const state = {
 
-    // basket: [
-
-    // ],
+    
     member:{
 
     }
@@ -32,6 +29,11 @@ const reducer = produce((state, action) => {
         //     })
         //     break
             case 'UPDATE_MEMBER':{
+                debugger
+                state.member={...action.payload}
+                break
+            }
+            case 'ADD_MEMBER':{
                 debugger
                 state.member={...action.payload}
                 break

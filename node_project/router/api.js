@@ -8,7 +8,10 @@ const router = require('express').Router()
 
 router.post('/addMember', product.addMember)
 router.get('/getAllMembers', product.getAllMembers)
+ 
 
+// router.patch('/:id', updateProduct);
+// router.delete('/:id', deleteProduct);
 
 
 
